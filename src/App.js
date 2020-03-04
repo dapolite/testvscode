@@ -1,26 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Form from './components/Form.jsx';
+import logo_sudh from './assets/SUDH_logo_1.png';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App row">
+        <div className="col-md-6 App-header">
+        <style dangerouslySetInnerHTML = {{__html: `
+      .styled { height: 100vh; }
+    `}} />
+        </div>
+        <div className="col-md-6">
+        <Form />
+        </div>
+
+      </div>
+    );
+  }
 }
 
 export default App;
